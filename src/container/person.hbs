@@ -1,0 +1,94 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  <h2>{{person.name}}</h2>
+  <p>Age: {{person.age}}</p>
+  <p>Gender: {{person.gender}}</p>
+
+  <hr />
+
+  <h3>Address:</h3>
+  <p>Street: {{person.address.street}}</p>
+  <p>City: {{person.address.city}}</p>
+  <p>State: {{person.address.state}}</p>
+  <p>ZIP: {{person.address.zip}}</p>
+  <p>Country: {{person.address.country}}</p>
+
+  <hr />
+  <h3>Education:</h3>
+  <ul>
+    {{#each person.education}}
+      <li>{{degree}}
+        in
+        {{major}}
+        from
+        {{university}}
+        (Graduation Year:
+        {{graduationYear}})</li>
+    {{/each}}
+  </ul>
+
+  <h3>Work Experience:</h3>
+  {{#each person.workExperience}}
+    <div class='work-experience'>
+      <h4>{{company}}</h4>
+      <p>Title: {{title}}</p>
+      <p>Start Date: {{startDate}}</p>
+      <p>End Date: {{endDate}}</p>
+      <h5>Responsibilities:</h5>
+      <ul>
+        {{#each responsibilities}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <p>Year Founded: {{year_founded}}</p>
+      <p>Industry: {{industry}}</p>
+
+      <h5>Employees:</h5>
+      {{#each employees}}
+        <div class='employee'>
+          <h6>{{name}}</h6>
+          <p>Position: {{position}}</p>
+          <p>Department: {{department}}</p>
+
+          <h6>Projects:</h6>
+          {{#each projects}}
+            <div class='project'>
+              <h6>{{name}}</h6>
+              <p>Description: {{description}}</p>
+              <p>Status: {{status}}</p>
+
+              <h6>Teams:</h6>
+              {{#each teams}}
+                <div class='team'>
+                  <h6>{{team_name}}</h6>
+                  <p>Team Leader: {{team_leader.name}}</p>
+                  <p>Team Leader Title:
+                    {{team_leader.title}}</p>
+                  <p>Team Leader Email:
+                    {{team_leader.email}}</p>
+
+                  <h6>Team Members:</h6>
+                  {{#each team_members}}
+                    <div class='team-member'>
+                      <p>Name: {{name}}</p>
+                      <p>Title: {{title}}</p>
+                    </div>
+                  {{/each}}
+                </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
