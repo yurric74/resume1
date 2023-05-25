@@ -270,9 +270,11 @@ router.get('/work', function (req, res) {
 
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
+    
     layout: 'program',
 
     program: {
