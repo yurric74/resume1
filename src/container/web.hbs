@@ -1,78 +1,85 @@
-{{!-- 
+{{! 
 Це код container файлу для summary сторінки, 
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
---}}
+}}
 
 <div>
-    <ul>
-      {{#each web.languages}}
-        <li>
-          <h3>{{name}}</h3>
-          <p>{{description}}</p>
-          {{#if version}}
-            <p>Version: {{version}}</p>
-          {{/if}}
-          {{#if attributes}}
-            <ul>
-              {{#each attributes}}
-                <li>{{name}} - {{description}}</li>
-              {{/each}}
-            </ul>
-          {{/if}}
-          {{#if elements}}
-            <ul>
-              {{#each elements}}
-                <li>
-                  <strong>{{name}}</strong>
-                  <p>{{description}}</p>
-                  {{#if attributes}}
-                    <ul>
-                      {{#each attributes}}
-                        <li>{{name}} - {{description}}</li>
-                      {{/each}}
-                    </ul>
-                  {{/if}}
-                </li>
-              {{/each}}
-            </ul>
-          {{/if}}
-          {{#if properties}}
-            <ul>
-              {{#each properties}}
-                <li>
-                  <strong>{{name}}</strong>
-                  <p>{{description}}</p>
-                  {{#if values}}
-                    <ul>
-                      {{#each values}}
-                        <li>{{value}} - {{description}}</li>
-                      {{/each}}
-                    </ul>
-                  {{/if}}
-                </li>
-              {{/each}}
-            </ul>
-          {{/if}}
-          {{#if functions}}
-            <ul>
-              {{#each functions}}
-                <li>
-                  <strong>{{name}}</strong>
-                  <p>{{description}}</p>
-                  {{#if parameters}}
-                    <ul>
-                      {{#each parameters}}
-                        <li>{{name}} ({{type}}) - {{description}}</li>
-                      {{/each}}
-                    </ul>
-                  {{/if}}
-                </li>
-              {{/each}}
-            </ul>
-          {{/if}}
-        </li>
-      {{/each}}
-    </ul>
+  <ul>
+    {{#each web.languages}}
+      <li>
+        <hr />
+        <h3>{{name}}</h3>
+
+        <p>{{description}}</p>
+        {{#if version}}
+
+          <h5>Version: {{version}}</h5>
+        {{/if}}
+
+        {{#if attributes}}
+          <ul>
+            {{#each attributes}}
+              <li>{{name}} - {{description}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+
+        {{#if elements}}
+          <ul>
+            {{#each elements}}
+              <li>
+                <strong>{{name}}</strong>
+                <p>{{description}}</p>
+                {{#if attributes}}
+                  <ul>
+                    {{#each attributes}}
+                      <li>{{name}} - {{description}}</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if properties}}
+          <ul>
+            {{#each properties}}
+              <li>
+                <strong>{{name}}</strong>
+                <p>{{description}}</p>
+                {{#if values}}
+                  <ul>
+                    {{#each values}}
+                      <li>{{value}} - {{description}}</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if functions}}
+          <ul>
+            {{#each functions}}
+              <li>
+                <strong>{{name}}</strong>
+                <p>{{description}}</p>
+                {{#if parameters}}
+                  <ul>
+                    {{#each parameters}}
+                      <li>{{name}}
+                        ({{type}}) -
+                        {{description}}</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
 </div>
 
 {{!-- 
