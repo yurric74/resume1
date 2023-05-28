@@ -1,0 +1,77 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  <h1>{{program.excursion.name}}</h1>
+  <p>Location:
+    {{program.excursion.location.city}},
+    {{program.excursion.location.country}}</p>
+  <p>Date: {{program.excursion.date}}</p>
+  <hr />
+  {{#each program.excursion.program}}
+    <h2>{{name}}</h2>
+    <p>Type: {{type}}</p>
+    <p>Duration: {{duration}} hours</p>
+
+    {{#if details.museum}}
+      <p>Museum: {{details.museum.name}}</p>
+      <p>Location:
+        {{details.museum.location.address}},
+        {{details.museum.location.city}},
+        {{details.museum.location.country}}</p>
+      <hr />
+      <h3>Exhibits:</h3>
+      <ul>
+        {{#each details.museum.exhibits}}
+          <li>
+            <strong>{{name}}</strong>
+            <p>Artist:{{#if artist}}
+                {{artist}}
+              {{else}}
+                Unknown
+              {{/if}}</p>
+            <p>Description: {{description}}</p>
+            <p>Audio Guide:
+              {{#if audio_guide}}
+                Yes
+              {{else}}
+                No
+              {{/if}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+
+    {{#if details.venue}}
+
+      <p>Venue: {{details.venue.name}}</p>
+      <p>Location:
+        {{details.venue.location.address}},
+        {{details.venue.location.city}},
+        {{details.venue.location.country}}</p>
+      <hr />
+      <h3>Performers:</h3>
+      <ul>
+        {{#each details.performers}}
+          <li>
+            <strong>{{name}}</strong>
+            <p>Type: {{type}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+
+    <p>Guide:
+      {{details.guide.name}}
+      (Language:
+      {{details.guide.language}}, Rating:
+      {{details.guide.rating}})</p>
+  {{/each}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
