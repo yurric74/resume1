@@ -90,6 +90,7 @@ router.get('/skills', function (req, res) {
     // ↙ сюди вводимо JSON дані
     layout: 'basic',
 
+
     page: {
       title: 'Resume | Skills',
     },
