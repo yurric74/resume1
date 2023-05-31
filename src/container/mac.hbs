@@ -1,0 +1,75 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  <h1>{{name}}</h1>
+  <p>{{description}}</p>
+  <p>Price: ${{price}}</p>
+  <p>Category: {{category}}</p>
+  <hr />
+  <h2>Features</h2>
+  <h3>Processor</h3>
+  <p>Brand: {{features.processor.brand}}</p>
+  <p>Model: {{features.processor.model}}</p>
+  <p>Speed: {{features.processor.speed}}</p>
+  <p>Cores: {{features.processor.cores}}</p>
+  <p>Cache: {{features.processor.cache}}</p>
+  <h3>Memory</h3>
+  <p>Type: {{features.memory.type}}</p>
+  <p>Size: {{features.memory.size}}</p>
+  <p>Speed: {{features.memory.speed}}</p>
+  <h3>Storage</h3>
+  <p>Type: {{features.storage.type}}</p>
+  <p>Size: {{features.storage.size}}</p>
+  <h3>Display</h3>
+  <p>Size: {{features.display.size}}</p>
+  <p>Resolution: {{features.display.resolution}}</p>
+  <p>Technology: {{features.display.technology}}</p>
+  <p>Color Space: {{features.display.color_space}}</p>
+  <p>Brightness: {{features.display.brightness}}</p>
+  <p>Refresh Rate: {{features.display.refresh_rate}}</p>
+  <h3>Graphics</h3>
+  <p>Brand: {{features.graphics.brand}}</p>
+  <p>Model: {{features.graphics.model}}</p>
+  <p>Memory: {{features.graphics.memory}}</p>
+  <h3>Ports</h3>
+  <ul>
+    {{#each features.ports}}
+      <li>Type: {{type}}</li>
+      <li>Count: {{count}}</li>
+      <li>Features:
+        <ul>
+          {{#each features}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+  </ul>
+  <h3>Battery</h3>
+  <p>Type: {{features.battery.type}}</p>
+  <p>Capacity: {{features.battery.capacity}}</p>
+  <p>Life: {{features.battery.life}}</p>
+  <p>Weight: {{features.weight}}</p>
+  <h3>Dimensions</h3>
+  <p>Height: {{features.dimensions.height}}</p>
+  <p>Width: {{features.dimensions.width}}</p>
+  <p>Depth: {{features.dimensions.depth}}</p>
+  <p>Operating System: {{features.operating_system}}</p>
+  <hr />
+  <h3>Accessories</h3>
+  <ul>
+
+    {{#each features.accessories}}
+      <li>Name: {{name}}</li>
+      <li>Price: ${{price}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
