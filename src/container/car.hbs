@@ -1,0 +1,152 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  <h1>{{make}} {{model}}</h1>
+  <p>Year: {{year}}</p>
+  <p>Color: {{color}}</p>
+  <hr />
+
+  <h2>Features</h2>
+  <h3>Interior</h3>
+  <p><b>Seats:</b></p>
+  <ul>
+    <li>Material: {{features.interior.seats.material}}</li>
+    <li>Color: {{features.interior.seats.color}}</li>
+    <li>Heated:
+      {{#if
+        features.interior.seats.heated
+      }}Yes{{else}}No{{/if}}</li>
+    <li>Ventilated:
+      {{#if
+        features.interior.seats.ventilated
+      }}Yes{{else}}No{{/if}}</li>
+  </ul>
+  <p><b>Dashboard:</b></p>
+  <ul>
+    <li>Material:
+      {{features.interior.dashboard.material}}</li>
+    <li>Color: {{features.interior.dashboard.color}}</li>
+    <li>Display Type:
+      {{features.interior.dashboard.display.type}}</li>
+    <li>Display Size:
+      {{features.interior.dashboard.display.size}}</li>
+    <li>Display Resolution:
+      {{features.interior.dashboard.display.resolution}}</li>
+    <li>Touchscreen:
+      {{#if
+        features.interior.dashboard.display.touchscreen
+      }}Yes{{else}}No{{/if}}</li>
+  </ul>
+  <p><b>Audio:</b></p>
+  <ul>
+    <li>System: {{features.interior.audio.system}}</li>
+    <li>Number of Speakers:
+      {{features.interior.audio.speakers}}</li>
+    <li>Subwoofer:
+      {{#if
+        features.interior.audio.subwoofer
+      }}Yes{{else}}No{{/if}}</li>
+    <li>Bluetooth:
+      {{#if
+        features.interior.audio.bluetooth
+      }}Yes{{else}}No{{/if}}</li>
+    <li>USB:
+      {{#if
+        features.interior.audio.USB
+      }}Yes{{else}}No{{/if}}</li>
+  </ul>
+
+  <h3>Exterior</h3>
+  <p><b>Wheels:</b></p>
+  <ul>
+    <li>Size: {{features.exterior.wheels.size}}</li>
+    <li>Type: {{features.exterior.wheels.type}}</li>
+    <li>Color: {{features.exterior.wheels.color}}</li>
+  </ul>
+  <p><b>Headlights:</b></p>
+  <ul>
+    <li>Type: {{features.exterior.headlights.type}}</li>
+    <li>Brightness:
+      {{features.exterior.headlights.brightness}}</li>
+    <li>Automatic:
+      {{#if
+        features.exterior.headlights.automatic
+      }}Yes{{else}}No{{/if}}</li>
+  </ul>
+  <p><b>Sunroof:</b></p>
+  <ul>
+    <li>Type: {{features.exterior.sunroof.type}}</li>
+    <li>Size: {{features.exterior.sunroof.size}}</li>
+    <li>Automatic:
+      {{#if
+        features.exterior.sunroof.automatic
+      }}Yes{{else}}No{{/if}}</li>
+  </ul>
+  <hr />
+
+  <h2>Safety</h2>
+  <p><b>Airbags:</b></p>
+  <ul>
+    <li>Front: {{features.safety.airbags.front}}</li>
+    <li>Side: {{features.safety.airbags.side}}</li>
+    <li>Knee: {{features.safety.airbags.knee}}</li>
+    <li>Rear: {{features.safety.airbags.rear}}</li>
+  </ul>
+  <p><b>Assistance:</b></p>
+  <ul>
+    <li>Blind Spot Monitoring:
+      {{#if
+        features.safety.assistance.blind_spot_monitoring
+      }}Yes{{else}}No{{/if}}</li>
+    <li>Rear Cross Traffic Alert:
+      {{#if
+        features.safety.assistance.rear_cross_traffic_alert
+      }}Yes{{else}}No{{/if}}</li>
+    <li>Lane Departure Warning:
+      {{#if
+        features.safety.assistance.lane_departure_warning
+      }}Yes{{else}}No{{/if}}</li>
+    <li>Adaptive Cruise Control:
+      {{#if
+        features.safety.assistance.adaptive_cruise_control
+      }}Yes{{else}}No{{/if}}</li>
+    <li>Collision Warning:
+      {{#if
+        features.safety.assistance.collision_warning
+      }}Yes{{else}}No{{/if}}</li>
+  </ul>
+  <hr />
+
+  <h2>Engine</h2>
+  <p>Type: {{engine.type}}</p>
+  <p>Displacement: {{engine.displacement}}</p>
+  <p>Horsepower: {{engine.horsepower}}</p>
+  <p>Torque: {{engine.torque}}</p>
+  <p>Transmission: {{engine.transmission.type}}</p>
+  <p>Gears: {{engine.transmission.gears}}</p>
+
+  <h3><i>Fuel Economy</i></h3>
+  <p>City: {{fuel_economy.city}}</p>
+  <p>Highway: {{fuel_economy.highway}}</p>
+  <p>Combined: {{fuel_economy.combined}}</p>
+  <hr />
+
+  <h2>Price</h2>
+  <p>Base: {{price.base}}</p>
+  <p>Destination: {{price.destination}}</p>
+  <p>Options:</p>
+  <ul>
+    <li>Navigation: {{price.options.navigation}}</li>
+    <li>Moonroof: {{price.options.moonroof}}</li>
+    <li>Premium Paint: {{price.options.premium_paint}}</li>
+  </ul>
+  <p>Total: {{price.total}}</p>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
