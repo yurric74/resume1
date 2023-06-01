@@ -690,7 +690,6 @@ router.get('/task21', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    layout: 'basic',
     heading: {
       main: {
         title: 'JavaScript',
