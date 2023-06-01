@@ -685,6 +685,11 @@ router.get('/web', function (req, res) {
   })
 })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -858,7 +863,9 @@ router.get('/car', function (req, res) {
   })
 })
 
+>>>>>>> a1bbb63cf95f730911dbcd02673b8483c544f279
 
+>>>>>>> 38f30c3e2a5445d06a9d485ccce01523aa64f01e
 // router.get Створює нам один ентпоїнт
 
 router.get('/mac', function (req, res) {
@@ -949,7 +956,11 @@ router.get('/mac', function (req, res) {
 
 // ================================================================
 
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> 38f30c3e2a5445d06a9d485ccce01523aa64f01e
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1107,12 +1118,19 @@ router.get('/facebook', function (req, res) {
   })
 })
 
+<<<<<<< HEAD
+>>>>>>> 5221828d54d1ae6a7bfacc777c178b05e65c0d18
+=======
 
+<<<<<<< HEAD
+>>>>>>> 38f30c3e2a5445d06a9d485ccce01523aa64f01e
+=======
 //                  ↑↑ сюди вводимо JSON дані
 // ================================================================
 
 
 
+>>>>>>> a1bbb63cf95f730911dbcd02673b8483c544f279
 // ================================================================
 // Підключаємо роутер до бек-енду
 module.exports = router
