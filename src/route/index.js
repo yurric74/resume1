@@ -686,6 +686,10 @@ router.get('/web', function (req, res) {
 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 38f30c3e2a5445d06a9d485ccce01523aa64f01e
 // router.get Створює нам один ентпоїнт
 
 router.get('/mac', function (req, res) {
@@ -776,7 +780,11 @@ router.get('/mac', function (req, res) {
 
 // ================================================================
 
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 38f30c3e2a5445d06a9d485ccce01523aa64f01e
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -933,7 +941,11 @@ router.get('/facebook', function (req, res) {
   })
 })
 
+<<<<<<< HEAD
 >>>>>>> 5221828d54d1ae6a7bfacc777c178b05e65c0d18
+=======
+
+>>>>>>> 38f30c3e2a5445d06a9d485ccce01523aa64f01e
 // ================================================================
 // Підключаємо роутер до бек-енду
 module.exports = router
