@@ -690,7 +690,6 @@ router.get('/task21', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    layout: 'basic',
     heading: {
       main: {
         title: 'JavaScript',
@@ -747,6 +746,8 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
+
+
         },
       ],
     },
@@ -835,11 +836,14 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
+
         },
       ],
     },
   })
 })
+
+
 
 // ================================================================
 
@@ -1060,6 +1064,7 @@ router.get('/task22', function (req, res) {
 
 //                  ↑↑ сюди вводимо JSON дані
 // ================================================================
+
 
 // ================================================================
 // Підключаємо роутер до бек-енду
