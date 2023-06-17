@@ -1,0 +1,535 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div class='p-3'>
+
+  <nav>
+
+    {{#with navigation}}
+      <div class='row'>
+
+        {{#each links}}
+          <div class='col-1 mx-3'>
+            <div class='nav'>
+              {{#if href}}
+                <a
+                  class='nav-item active'
+                  href='{href}}'
+                >{{text}}</a>
+              {{else}}desabled{{/if}}
+            </div>
+          </div>
+        {{/each}}
+
+      </div>
+
+    {{/with}}
+  </nav>
+  <hr />
+  <div class="row">
+    <div class="col-12">
+        
+
+      <div>
+      <div class="row">
+      <div class="col-7">
+   
+            <p class='h1'>{{header}}</p>
+            {{#with contacts_data}}
+              <p class='h3'>{{title}}</p>
+              <div class='row'>
+                {{#each buttons}}
+                  <div class='col-5'>
+                    {{#if isPrimary}}
+                      <div
+                        class='btn btn-warning text-light'
+                      >{{text}}</div>{{/if}}
+                    {{#if isOutline}}
+                      <div
+                        class='btn btn-outline-warning'
+                      >{{text}}</div>{{/if}}
+                  </div>
+                {{/each}}
+              </div>
+
+              {{#with form}}
+
+                {{#with input}}
+                  <div class='row'>
+                    {{#with surname}}
+                      <div class='col-6'>
+                        <label
+                          class='form-label'
+                        >{{label}}</label>
+                        <div
+                          class='form-control'
+                        >{{placeholder}}</div>
+                        <div class='form-text'>{{caption}}</div>
+                      </div>
+                    {{/with}}
+
+                    {{#with name}}
+                      <div class='col-6'>
+                        <label
+                          class='form-label'
+                        >{{label}}</label>
+                        <div
+                          class='form-control'
+                        >{{placeholder}}</div>
+                        <div class='form-text'>{{caption}}</div>
+                      </div>
+                    {{/with}}
+                    {{#with phone}}
+                      <div class='col-6'>
+                        <label
+                          class='form-label'
+                        >{{label}}</label>
+                        <div
+                          class='form-control'
+                        >{{placeholder}}</div>
+                        <div class='form-text'>{{caption}}</div>
+                      </div>
+                    {{/with}}
+
+                    {{#with email}}
+                      <div class='col-6'>
+                        <label
+                          class='form-label'
+                        >{{label}}</label>
+                        <div
+                          class='form-control'
+                        >{{placeholder}}</div>
+                        <div class='form-text'>{{caption}}</div>
+                      </div>
+                    {{/with}}
+                  </div>
+                {{/with}}
+
+              {{/with}}
+
+              <hr />
+
+              <div class='col-6'>
+                <div class='form-check form-switch'>
+                  <label class='form-check-label'>Отримувати
+                    інформацію про новинки</label>
+                  <input
+                    desabled
+                    type='checkbox'
+                    class='form-check-input'
+                  />
+                </div>
+              </div>
+              <div class='col-6'>
+                <div class='form-check form-switch active'>
+                  <label class='form-check-label'>
+                    Отримувати інформацію про новинки</label>
+                  <input name="switch"
+                    active
+                    type='checkbox'
+                    class='form-check-input'
+                  />
+                </div>
+              </div>
+
+            {{/with}}
+            <hr />
+      </div>
+      </div>
+      </div>
+    {{!!Карточки!!}}
+        <div>
+        <div class="row">
+        <div class="col-4">
+          {{#with action_block}}
+       
+          <div class="col-12 ">
+            <div class="card">
+              <div class="card-body">
+              <div class="btn btn-success text-light">Швидке замовлення</div>
+              <div class="btn btn-danger text-light">Видалити</div>
+              <div class="btn btn-info text-light">Детальніше</div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+        
+            <div class="card">
+
+                <p class="h3">{{total.title}}</p>
+              
+                  <div>Ноут: 25 000грн</div>
+                  <div>Мишка: 25 000грн</div>
+                  <div>Клава: 25 000грн</div>
+                  <hr>
+                  <div>Всього товарів: 75 000грн</div>
+                  <div>Купони: Немає</div>
+                  <div>Доставка: безкоштовно</div>
+                  <hr>
+                    <div>Всього товарів: 75 000грн</div>
+                  <hr>
+                  <div class="col-12">
+                  <div class="btn btn-primary text-light">Підтвердити замовлення</div>
+                  </div>
+                  <br>
+                  <div class="col-10">
+                  <div class="btn btn-outline-info ">Відмінити купони</div>
+                  </div>
+              
+            
+            </div>
+
+          </div>
+          {{/with}}
+          </div>
+          </div>
+    
+        </div>
+    </div>     
+  </div>   
+   {{!!delivery}}
+  <div class='p-3'>
+   
+   
+    <div class="col-12">
+    {{#with delivery}}
+      <div class='h2'>Доставка</div>
+      <div class="card">
+        <div class="row g-2">
+          <div class="col-6">
+          <div>
+            
+            <label class="form-label mx-3">Місто доставки</label>
+            <select class="form-select">
+            <option selected>Оберіть місто доставки</option>
+            <option value="1">Київ</option>
+            <option value="2">Харків</option>
+            <option value="3">Одеса</option>
+            <option value="4">Львів</option>
+            <option value="5">Дніпро</option>
+            <option value="6">Донецьк</option>
+            </select>
+            
+          </div>
+          </div>
+          <div class="col-6">
+          <div>
+            
+            <label class="form-label mx-3">Район доставки</label>
+            <select class="form-select">
+            <option selected>Оберіть район доставки</option>
+            <option value="1">Голосіївський</option>
+            <option value="2">Оболонський</option>
+            <option value="3">Печерський</option>
+            <option value="4">Дарницький</option>
+            <option value="5">Деснянський</option>
+            <option value="6">Подільський</option>
+            </select>
+          </div>
+          </div>
+        
+          
+        </div> 
+        
+      </div>
+      </div>
+          <br>
+
+
+      <div class='form-check'>
+        <label class='form-check-label'>Самовивіз з
+          відділення Нової пошти</label>
+        <input name='delivery_type' type='radio' class='form-check-input' />
+      </div>
+
+      <div class='form-check'>
+        <label class='form-check-label'>Кур’єром Нової пошти</label>
+        <input name='delivery_type' type='radio' class='form-check-input' />
+      </div>
+
+      <div class='form-check'>
+        <label class='form-check-label'>Самовивіз з магазину</label>
+        <input name='delivery_type' type='radio' class='form-check-input' />
+      </div>
+
+      <div class='form-check'>
+        <label class='form-check-label'>Доставка закордон</label>
+        <input name='delivery_type' type='radio' class='form-check-input' />
+      </div>
+      <hr />
+
+    
+  
+
+      <div class='p-3'>
+      
+      <div class='h2'>Оплата</div>
+
+      <div class='form-check'>
+
+        <label class='form-check-label'>Оплата при отриманні</label>
+        <input name='payment' type='radio' class='form-check-input' />
+        <div class="form-text">За тарифами перевізника</div>
+      </div>
+
+      <div class='form-check'>
+        <label class='form-check-label'>Оплатити зараз</label>
+        <input name='payment' type='radio' class='form-check-input' />
+      </div>
+
+     
+      <hr />
+
+      
+      <div class="p-2">
+       
+          {{#with contact}}
+            <div class="h3">{{title}}</div>
+            <div class='row'>
+                      {{#with surname}}
+                        <div class='col-6'>
+                          <label
+                            class='form-label'
+                          >{{label}}</label>
+                          <div
+                            class='form-control'
+                          >{{placeholder}}</div>
+                          <div class='form-text'>{{caption}}</div>
+                        </div>
+                      {{/with}}
+
+                      {{#with name}}
+                        <div class='col-6'>
+                          <label
+                            class='form-label'
+                          >{{label}}</label>
+                          <div
+                            class='form-control'
+                          >{{placeholder}}</div>
+                          <div class='form-text'>{{caption}}</div>
+                        </div>
+                      {{/with}}
+                      
+                      {{#with phone}}
+                        <div class='col-6'>
+                          <label
+                            class='form-label'
+                          >{{label}}</label>
+                          <div
+                            class='form-control'
+                          >{{placeholder}}</div>
+                          <div class='form-text'>{{caption}}</div>
+                        </div>
+                      {{/with}}
+
+                      {{#with email}}
+                        <div class='col-6'>
+                          <label
+                            class='form-label'
+                          >{{label}}</label>
+                          <div
+                            class='form-control'
+                          >{{placeholder}}</div>
+                           <div class='form-text'>{{caption}}</div>
+                        
+                        </div>
+                      {{/with}}
+                  
+            </div>
+            </div>
+          {{/with}}
+      </div>
+    {{/with}}
+    </div>  
+    <hr>  
+
+
+  <div class="p-4">
+    <label class="form-label">{{delivery.coment.label}}</label>
+    <input class="form-control">
+  </div>
+  <hr>
+  {{!!coupon}}
+  <div class="8">
+    {{#with coupon}}
+    <div class=" p-4  ">
+      <div class="h3">{{title}}</div>
+      
+      <label class="form-label">{{select.availabel_coupon.label}}</label>
+      <select class="form-select form-select-lg">
+        <option selected>{{select.availabel_coupon.placeholder}}</option>
+        <option value="1">SEEYALATER</option>
+        <option value="2">HOTEL10</option>
+        <option value="3">DOWNLOAD25</option>
+        
+      </select>
+     
+       
+      <label class="form-label">{{select.friend_coupon.label}}</label>
+      <select class="form-select" >
+        <option selected>{{select.friend_coupon.placeholder}}</option>
+        <option value="1">TRAVEL5</option>
+        <option value="2">75VACA</option>
+        <option value="3">150VACA</option>
+        
+      </select>
+
+      <label class="form-label">{{add.friend.label}}</label>
+      <input class="form-control form-control-lg">
+      <div class="form-text">{{add.friend.caption}}</div>
+
+      <label class="form-label">{{add.colleague.label}}</label>
+      <input class="form-control ">
+      <div class="form-text">{{add.colleague.caption}}</div>
+    
+    </div>
+    {{/with}}
+  </div>
+  <hr>
+  {{!!quiz}}
+  <div class="col-8">
+    {{#with quiz}}
+    <div class="h3">{{title}}</div>
+    <div>{{preference.title}}</div>
+    <div class="form-check">
+      <label class="form-check-label">Смартфони</label>
+      <input type="radio" class="form-check-input">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">Ноутбуки</label>
+      <input type="radio" class="form-check-input">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">Планшети</label>
+      <input type="radio" class="form-check-input">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">ПК</label>
+      <input type="radio" class="form-check-input">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">Телевізори</label>
+      <input type="radio" class="form-check-input">
+    </div>
+    {{!!expirience}}
+    <div>
+      <label class="form-label">{{your_expirience.label}}</label>
+      <input class="form-control">
+      <div class="form-text"></div>
+    </div>
+    {{!! purchase}}
+    <div>
+      <label class="form-label">{{purchase_frequency.label}}</label>
+      <select class="form-select">
+        <option selected>{{purchase_frequency.placeholder}}</option>
+        <option selected value="1">Раз в тиждень</option>
+        <option selected value="2">Раз в місяць</option>
+        <option selected value="3">Раз в рік</option>
+      </select>
+    </div>
+    {{!!factors}}
+    <div>
+      <div class="form-check">
+        <div>{{factors.title}}</div>
+        <label class="form-check-label">Ціна</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+       <div class="form-check">
+        <label class="form-check-label">Репутація бренду</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+       <div class="form-check">
+        <label class="form-check-label">Якість</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+         <div class="form-check">
+        <label class="form-check-label">Особливості</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+         <div class="form-check">
+        <label class="form-check-label">Гарантія</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+         <div class="form-check">
+        <label class="form-check-label">Доступність</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+         <div class="form-check">
+        <label class="form-check-label">Обслуговування клієнтів</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+    </div>
+    {{/with}}
+  </div>
+  <hr>
+   {{!!footer}}
+    <div class="row ">
+    
+    {{#each footer}}
+    <div class="col-2 g-5">
+      
+      <a href="https://www.youtube.com/">Home</a>
+      <a href="https://www.youtube.com/feed/trending">Trending</a>
+      <a href="https://www.youtube.com/feed/subscriptions">Subscriptions</a>
+      <a href="https://www.youtube.com/feed/library">Library</a>
+     
+    </div>
+
+    {{/each}}
+   
+    </div>
+
+  
+</div>
+
+{{!!Карточки!!}}
+{{#with action_block}}
+<div class="p-3">
+  <div class="col-4 ">
+    <div class="card">
+      <div class="card-body">
+      <div class="btn btn-success text-light">Швидке замовлення</div>
+      <div class="btn btn-danger text-light">Видалити</div>
+      <div class="btn btn-info text-light">Детальніше</div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col-4">
+    <div class="card">
+
+        <p class="h3">{{total.title}}</p>
+       
+          <div>Ноут: 25 000грн</div>
+          <div>Мишка: 25 000грн</div>
+          <div>Клава: 25 000грн</div>
+          <hr>
+          <div>Всього товарів: 75 000грн</div>
+          <div>Купони: Немає</div>
+          <div>Доставка: безкоштовно</div>
+          <hr>
+            <div>Всього товарів: 75 000грн</div>
+          <hr>
+          <div class="col-12">
+          <div class="btn btn-primary text-light">Підтвердити замовлення</div>
+          </div>
+          <br>
+          <div class="col-10">
+          <div class="btn btn-outline-info ">Відмінити купони</div>
+          </div>
+       
+     
+    </div>
+
+  </div>
+{{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
