@@ -1578,7 +1578,7 @@ router.get('/shopprofile', function (req, res) {
         users: [
           {
             name: 'Іванов Іван Іванович',
-            phone: '+38 (098) 222 22 22',
+            phone: '+38 (098) 222 2222 ',
             button: {
               text: 'Редагувати',
               link: 'https://www.youtube.com/',

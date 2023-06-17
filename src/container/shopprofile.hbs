@@ -37,263 +37,276 @@
 
   <hr />
   {{!!header}}
-  <header class="p-3">
-    <div class='h1'>{{header.title}}</div>
-    <p class='text-muted'>{{header.description}}</p>
-    <a
-      class='btn btn-outline-secondary text-dark'
-      href='{{header.button.link}}'
-    >{{header.button.text}}</a>
+  <header class='p-3'>
+    <div class='h1'>{{header}}</div>
   </header>
+  {{!!purchase}}
+
+  {{!!tabs}}
+  <div class='nav'>
+    <div class='nav nav-tabs'>
+      <div class='nav-item'>
+        <p href='#'>Всі замовлення</p>
+      </div>
+      <div class='nav-item'>
+        <p href='#'>Гарантія на повернення</p>
+      </div>
+    </div>
+  </div>
+
+  {{!!actionBlock}}
+  <div class='row'>
+    <div class='col-4'>
+      <label class='form-label'></label>
+      <input class='form-control' />
+      <div class='form-text'></div>
+    </div>
+    {{!! buttons}}
+    <div class='col-2'>
+      <div class='btn btn-success text-light'>Знайти</div>
+    </div>
+
+    <div class='col-3'>
+      <div
+        class='btn btn-outline-success text-success'
+      >Виділити все</div>
+    </div>
+
+    <div class='col-3'>
+      <div
+        class='btn btn-outline-danger text-danger'
+      >Очистити все</div>
+    </div>
+
+  </div>
   <hr />
-  {{!!goodBlock}}
 
-  <div class="p-3">
-{{!! card1}}
-  <div class='card'>
-    
-
-      <div class='card-body'>
-        <div class='row'>
-        <div class='col-2'>
-          <img
-            src='https://picsum.photos/110/110'
-            alt='Samsung Galaxy S21 Ultra '
-          />
-        </div>
-        <div class='col-4'>
-          <h5>Samsung Galaxy S21 Ultra </h5>
-          <p>'екран 6.8", процесор Exynos 2100/Snapdragon
-            888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000
-            мАг</p>
-        </div>
-        <div class='col-2'>
-          <h6>Ціна:</h6>
-          <h4>25 000грн</h4>
-        </div>
-        <div class='col-2'>1 шт</div>
-        <div class='col-2'>
-          <div
-            class='btn btn-primary text-light'
-          >Додати</div>
-          <div class='btn btn-outline-danger'>Видалити</div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
- {{!! card2}}
-  <div class='card'>
-    
-
-      <div class='card-body'>
-        <div class='row'>
-        <div class='col-2'>
-          <img
-            src='https://picsum.photos/110/110'
-            alt='Ноутбук Dell XPS 13 '
-          />
-        </div>
-        <div class='col-4'>
-          <h5>Ноутбук Dell XPS 13 </h5>
-          <p>екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.</p>
-        </div>
-        <div class='col-2'>
-          <h6>Ціна:</h6>
-          <h4>25 000грн</h4>
-        </div>
-        <div class='col-2'>1 шт</div>
-        <div class='col-2'>
-          <div
-            class='btn btn-primary text-light'
-          >Додати</div>
-          <div class='btn btn-outline-danger'>Видалити</div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
- {{!! card3}}
-
-  <div class='card'>
-    
-
-      <div class='card-body'>
-        <div class='row'>
-        <div class='col-2'>
-          <img
-            src='https://picsum.photos/110/110'
-            alt='Телевізор LG OLED CX'
-          />
-        </div>
-        <div class='col-4'>
-          <h5> Телевізор LG OLED CX</h5>
-          <p>екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.</p>
-        </div>
-        <div class='col-2'>
-          <h6>Ціна:</h6>
-          <h4>25 000грн</h4>
-        </div>
-        <div class='col-2'>1 шт</div>
-        <div class='col-2'>
-          <div
-            class='btn btn-primary text-light'
-          >Додати</div>
-          <div class='btn btn-outline-danger'>Видалити</div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
- {{!! card4}}
-
-  <div class='card'>
-    
-
-      <div class='card-body'>
-        <div class='row'>
-        <div class='col-2'>
-          <img
-            src='https://picsum.photos/110/110'
-            alt='Навушники Sony WH-1000XM4 '
-          />
-        </div>
-        <div class='col-4'>
-          <h5>Навушники Sony WH-1000XM4</h5>
-          <p>Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.</p>
-        </div>
-        <div class='col-2'>
-          <h6>Ціна:</h6>
-          <h4>25 000грн</h4>
-        </div>
-        <div class='col-2'>1 шт</div>
-        <div class='col-2'>
-          <div
-            class='btn btn-primary text-light'
-          >Додати</div>
-          <div class='btn btn-outline-danger'>Видалити</div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr>
-
-{{!!total}}
-<div class="p-3">
-{{#with total}}
-    <h3>{{title}}</h3>
-    <h5>{{amount}}</h5>
-    <p>{{delivery}}</p>
-    
-    {{#each buttons}}
-    <li>
-    {{#if isSuccess}}<div class="btn btn-success text-light">{{text}}</div>{{/if}}
-    
-    {{#if isOutline}}<div class="btn btn-outline-success text-success">{{text}}</div>{{/if}}
-    {{/each}}
-    </li>
-{{/with}}
-</div>
-<hr>
-
-{{!!goodsOtherBlock}}
-<div class="p-3">
-    <p class="H1 text-center">{{goodsOtherBlock.title}}</p>
+  {{!!itemList}}
+  <div>
+    {{!!block1}}
     <div class="row">
-<div class="col-4">        
-<div class="card">
-    <img class="card-img-top" src="https://picsum.photos/400/200" alt="iPhone 13">
-    <div class="card-body">
-        <div class="row">
-        <div class="col-6">
-        <div class="h4 card-title">iPhone 13</div>
-        </div>
-        <div class="col-6">
-        <div class="btn btn-warning text-light rounded-pill">HOT</div>
-        <div class="btn btn-primary text-light rounded-pill">Нове</div>
-        </div>
-        </div>
-        <p>The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.</p> 
-    </div>
-</div>
-</div>
-<div class="col-4">
-<div class="card">
-    <img class="card-img-top" src="https://picsum.photos/400/200" alt="MacBook Pro">
-    <div class="card-body">
-        <div class="row">
-        <div class="col-6">
-        <div class="h4 card-title">MacBook Pro</div>
-        </div>
-        <div class="col-6">
-        <div class="btn btn-warning text-light rounded-pill">HOT</div>
-        <div class="btn btn-primary text-light rounded-pill">Нове</div>
-        </div>
-        </div>
-        <p>Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.</p> 
-    </div>
-</div>
-</div>
-<div class="col-4">
-<div class="card">
-    <img class="card-img-top" src="https://picsum.photos/400/200" alt="AirPods Pro">
-    <div class="card-body">
-        <div class="row">
-        <div class="col-6">
-        <div class="h4 card-title">AirPods Pro</div>
-        </div>
-        <div class="col-6">
-        <div class="btn btn-warning text-light rounded-pill desabled">HOT</div>
-        <div class="btn btn-primary text-light rounded-pill">Нове</div>
-        </div>
-        </div>
-        <p>Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.</p> 
-    </div>
-</div>
-</div>
-    </div>
-</div>
-<hr>
-
-{{!!subscribe}}
-
-<div class="p-3">
-    {{#with subscribe}}
-    <div class="card text-bg-dark">
-        <div class="card-body">
-            <h2>{{header}}</h2>
-            <p>{{description}}</p>
-            {{#each buttons}}
-            <div class="row">
-            <div class="col-6">
-            <div class="btn btn-primary text-light">{{text}}</div>
-            </div>
-            </div>
-            {{/each}}
-        </div>
-    </div>
-    {{/with}}
-</div>
-<hr>
-
-  {{!!footer}}
-  <div class="p-3">
-       <div class="row ">
-    
-    {{#each footer}}
-    <div class="col-2 g-5">
       
-      <a href="https://www.youtube.com/">Home</a>
-      <a href="https://www.youtube.com/feed/trending">Trending</a>
-      <a href="https://www.youtube.com/feed/subscriptions">Subscriptions</a>
-      <a href="https://www.youtube.com/feed/library">Library</a>
+
+
+   
+      <div class='col-2'>
+        <div>№12587463 від 01.01.2023</div>
+        <h5>Виконано</h5>
+      </div>
+  
+
+
+   
+      <div class='col-1'>
+        <div>Сума</div>
+        <h5>25 000 ₴</h5>
+      </div>
+   
+
+    
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div>
+        <div class='col-2'>
+        <img></img>
+      </div> 
+        <div class='col-2'>
+        <img></img>
+      </div> 
+   
+
+   
+      <div class='col-1'>
+        <div class="btn btn-primary">Детальніше</div>
+      </div>
+   
      
     </div>
+    <hr />
+    {{!!block2}}
 
-    {{/each}}
+    <div class="row">
+      
+
+
    
+      <div class='col-2'>
+        <div>№12587463 від 01.01.2023</div>
+        <h5>Виконано</h5>
+      </div>
+  
+      <div class='col-1'>
+        <div>Сума</div>
+        <h5>25 000 ₴</h5>
+      </div>
+   
+
+      
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+     
+      
+   
+
+   
+      <div class='col-1'>
+        <div class="btn btn-primary">Детальніше</div>
+      </div>
+    </div>
+  
+  
+    <hr />
+
+    {{!!block3}}
+
+    <div class="row">
+
+
+   
+      <div class='col-2'>
+        <div>№12587463 від 01.01.2023</div>
+        <h5>Виконано</h5>
+        
+     
+      </div>
+  
+
+
+   
+      <div class='col-1'>
+        <div>Сума</div>
+        <h5>25 000 ₴</h5>
+
+ 
+
+      </div>
+   
+       
+         <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+       <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+        <div class='col-2'>
+        <img></img>
+      </div> 
+        
+       
+
+     
+   
+
+   
+      <div class='col-2'>
+        <div class="btn btn-primary">Детальніше</div>
+      </div>
+    </div>
+  
+  </div>
+  <hr />
+
+
+  {{!!recipients}}
+
+
+  
+  <div clas="=card">
+  <div class="card-body">
+  
+    
+      <h2>{{userInfo.recipients.title}}</h2>
+      
+      <div class="row">
+     <div class="card">
+      <div class="card-body">
+      <div class="col-4">
+          <h6>Іванов Іван Іванович</h6>
+          <p>+38 (098) 222 2222</p>
+          <div class="btn btn-primary">Редагувати</div>
+      </div>
+      </div>
+     </div>
+
+     <div class="card">
+      <div class="card-body">
+      <div class="col-4">
+         <h6>Петров Петро Петрович</h6>
+          <p>+38 (098) 111 11 11</p>
+          <div class="btn btn-primary">Редагувати</div>
+      </div>
+      </div>
+     </div>
+      </div>
+ 
+  </div>
+  </div>
+
+  {{!!contacts}}
+  <div class="row">
+    <div clas="=card">
+      <h2>{{userInfo.contacts.title}}</h2>
+     <div class="card">
+      <div class="col-4">
+          <p>Номер телефону</p>
+          <h6>+38 (098) 222 22 22</h6>
+          <div class="btn btn-primary">Редагувати</div>
+      </div>
+
+     </div>
+
+     <div class="card">
+      <div class="col-4">
+        <p>Додатковий номер телефону'</p>
+        <h6>38 (098) 111 11 11</h6>
+        <div class="btn btn-outline-secondary">Очистити</div>
+      </div>
+
+     </div>
+
+     <div class="card">
+      <div class="col-4">
+        <p>Електронна адреса</p>
+        <h6>ivanivanov@ukr.net</h6>
+        <div class="btn btn-outline-danger">Видалити</div>
+      </div>
+
+     </div>
+
+      
+    </div>
+  </div>
+
+
+  {{!!footer}}
+  <div class='p-3'>
+    <div class='row'>
+
+      {{#each footer}}
+        <div class='col-2 g-5'>
+
+          <a href='https://www.youtube.com/'>Home</a>
+          <a
+            href='https://www.youtube.com/feed/trending'
+          >Trending</a>
+          <a
+            href='https://www.youtube.com/feed/subscriptions'
+          >Subscriptions</a>
+          <a
+            href='https://www.youtube.com/feed/library'
+          >Library</a>
+
+        </div>
+
+      {{/each}}
+
     </div>
 
   </div>
