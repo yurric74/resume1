@@ -1,0 +1,67 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+
+    <div class="row ">
+    
+    <nav>
+      <div class="col-12">
+                {{#each navigation.links}}
+             
+                    <a href="{{this.href}}">{{this.text}}</a>
+                
+                {{/each}}
+     
+            <a  href="#">Desabled</a>
+      </div>
+    </nav>
+    </div>
+    </div>   
+
+
+
+     <div class='nav'>
+    <div class='nav-item'>
+      <a
+        href='https://github.com/'
+        class='nav-link'
+      >Home</a>
+    </div>
+    <div class='nav-item'>
+      <a
+        href='https://www.google.com/'
+        class='nav-link'
+      >Contacts</a>
+    </div>
+    <div class='nav-item'>
+      <a
+        href='https://www.youtube.com/'
+        class='nav-link'
+      >Help</a>
+    </div>
+    <div class='nav-item'>
+      <a
+        href='https://github.com/'
+        class='nav-link disabled'
+      >Desabled</a>
+    </div>
+  </div>
+ {{!!footer}}
+    <footer>
+
+        <ul>
+            {{#each footer}}
+            <li><a href="{{link}}">{{text}}</a></li>
+            {{/each}}
+        </ul>
+        
+    </footer>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
