@@ -1423,7 +1423,7 @@ router.get('/shopprofile', function (req, res) {
         },
       ],
     },
-
+  
     header: 'Мої замовлення',
 
     purchase: {
@@ -1842,8 +1842,8 @@ router.get('/shopprofile', function (req, res) {
         ],
       },
     },
-
-    
+ 
+   
 
     newsBlock: {
       title: 'Latest News',
