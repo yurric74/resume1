@@ -2,9 +2,95 @@
 Це код container файлу для summary сторінки, 
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 }}
-
+<br>
+<br>
+<br>
+<hr>
 <div>
+    
+  {{#with heading}}
+    <div class="card">
+        <div class="card-body">
+      <p class='h1'>{{main.title}}</p>
+      <br>
+      <p class='h6'>{{main.text}}</p>
+      <br>
+      <button type="button" class="btn btn-primary">{{main.button_text.solid}}</button>
+      <br>
+      <br>
+      <br>
+      <div><button type="button" class="btn btn-outline-primary "  style="--bs-btn-padding-y: .7rem; --bs-btn-padding-x: 4rem; --bs-btn-font-size: .75rem;">{{main.button_text.outline}}</button></div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+      <p class='h2'>{{second.title}}</p>
+       <br>
+      <p class='h6'>{{second.text}}</p>
+       <br>
+      <button type="button" class="btn btn-secondary btn-lg">{{second.button_text.solid}}</button>
+      <br>
+      <br>
+      <div><button type="button" class="btn btn-outline-primary btn-lg">{{second.button_text.outline}}</button></div>
 
+   
+      <p class='h3'>{{subblock.title}}</p>
+       <br>
+      <p class='h6'>{{subblock.text}}</p>
+       <br>
+      <button type="button" class="btn btn-dark btn-sm">{{subblock.button_text.solid}}</button>
+      <br>
+      <br>
+      <div><button type="button" class="btn btn-outline-dark btn-sm">{{subblock.button_text.outline}}</button></div>
+        </div>
+    </div>
+  {{/with}}
+    <br>
+  {{#with nested_display}}
+    <div class="card">
+        <div class="card-body">
+      <p class='display-1'>{{title}}</p>
+      <div class="card">
+        <div class="card-body">
+      
+        <p class="display-4">{{children_display.title}}</p>
+        <p class='h6'>{{children_display.text}}</p>
+        
+        <button type="button" class="btn btn-outline-warning " >{{children_display.button.text}}</button>
+        <br>
+        <br>
+       
+         </div>
+        </div>
+      <p class='h6'>{{header_text}}</p>
+      <br>
+      <button type="button" class="btn btn-info" style="--bs-btn-padding-y: .7rem; --bs-btn-padding-x: .001rem; --bs-btn-font-size: .75rem;" >{{button.text}}</button>
+             </div>
+    </div>
+    </div>
+  {{/with}}
+  <hr>
+  {{#with paragraph}}
+     <div class="card">
+        <div class="card-body">
+      <h1 class='h4'>{{title}}</h1>
+      <br>
+      <p class='h6'>{{text}}</p>
+      <br>
+     <button type="button" class="btn btn-link">{{button.url}} {{button.text}}</a></button>
+      <ul>
+         <div class="card">
+        <div class="card-body">
+        {{#each list_name}}
+          <li><button type="button" class="btn btn-link">{{this.url}} {{this.text}}</a></li>
+        {{/each}}
+        </div>
+        </div>
+      </ul>
+    </div>
+     </div>
+  {{/with}}
 </div>
 
 {{!-- 
