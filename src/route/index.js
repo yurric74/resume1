@@ -2591,7 +2591,6 @@ router.get('/shopprofile', function (req, res) {
 
 //====================================
 
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -2600,7 +2599,7 @@ router.get('/shopreview', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-     layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
