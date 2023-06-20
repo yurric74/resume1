@@ -141,7 +141,6 @@ router.get('/skills', function (req, res) {
         },
       ],
     },
-
     footer,
   })
 })
@@ -201,8 +200,6 @@ router.get('/education', function (req, res) {
         },
       ],
     },
-
-    footer,
   })
 })
 
@@ -690,8 +687,8 @@ router.get('/task21', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    layout: 'basic',
     heading: {
+      layout: 'basic',
       main: {
         title: 'JavaScript',
         text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
@@ -833,105 +830,6 @@ router.get('/js', function (req, res) {
 
 // router.get Створює нам один ентпоїнт
 
-router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('car', {
-    layout: 'basic',
-    make: 'Toyota',
-    model: 'Camry',
-    year: 2022,
-    color: 'silver',
-    features: {
-      interior: {
-        seats: {
-          material: 'leather',
-          color: 'black',
-          heated: true,
-          ventilated: true,
-        },
-        dashboard: {
-          material: 'plastic',
-          color: 'black',
-          display: {
-            type: 'LCD',
-            size: 10.1,
-            resolution: '1280x720',
-            touchscreen: true,
-          },
-        },
-        audio: {
-          system: 'JBL',
-          speakers: 8,
-          subwoofer: true,
-          bluetooth: true,
-          USB: true,
-        },
-      },
-      exterior: {
-        wheels: {
-          size: 18,
-          type: 'alloy',
-          color: 'silver',
-        },
-        headlights: {
-          type: 'LED',
-          brightness: 'high',
-          automatic: true,
-        },
-        sunroof: {
-          type: 'panoramic',
-          size: 'large',
-          automatic: true,
-        },
-      },
-      safety: {
-        airbags: {
-          front: 2,
-          side: 2,
-          knee: 2,
-          rear: 2,
-        },
-        assistance: {
-          blind_spot_monitoring: true,
-          rear_cross_traffic_alert: true,
-          lane_departure_warning: true,
-          adaptive_cruise_control: true,
-          collision_warning: true,
-        },
-      },
-    },
-    engine: {
-      type: 'gasoline',
-      displacement: 2.5,
-      horsepower: 206,
-      torque: 186,
-      transmission: {
-        type: 'automatic',
-        gears: 8,
-      },
-    },
-    fuel_economy: {
-      city: 28,
-      highway: 39,
-      combined: 32,
-    },
-    price: {
-      base: 25900,
-      destination: 995,
-      options: {
-        navigation: 1200,
-        moonroof: 800,
-        premium_paint: 595,
-      },
-      total: 28990,
-    },
-  })
-})
-
-// router.get Створює нам один ентпоїнт
-
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1017,6 +915,8 @@ router.get('/mac', function (req, res) {
     },
   })
 })
+
+// ================================================================
 
 // ================================================================
 
@@ -1173,6 +1073,65 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
+  })
+})
+
+//==================================================
+
+router.get('/task22', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('task22', {
+    layout: 'basic',
+    page_header: {
+      title: 'InnovaMind',
+      description: 'Welcome to our wonderful community',
+    },
+    section: {
+      about_us: {
+        title_list: {
+          main: 'InnovaMind',
+          sub: 'InnovaMind is a forward-thinking startup focused on innovation. We are dedicated to creating efficient and powerful software through the use of first-class functions.',
+        },
+        button: { text: 'Show more' },
+      },
+      advantage: {
+        title: 'Advantage',
+        efficiency: {
+          title: 'Efficiency',
+          sub_title: 'Streamline your software development',
+          description:
+            'Streamline your software development with our innovative platform...',
+          button: 'Show more',
+        },
+        innovation: {
+          title: 'Innovation',
+          sub_title:
+            'Forward-thinking approach to programming',
+          description:
+            ' Stay ahead of the curve with our forward-thinking approach to programming...',
+          button: 'Show more',
+        },
+        collaboration: {
+          title: 'Collaboration',
+          sub_title: 'Connect with like-minded developers',
+          description:
+            'Connect with a community of like-minded developers to share knowledge and insights...',
+          button: 'Show more',
+        },
+      },
+      agreement: {
+        title: 'Terms of use',
+        info: {
+          sub_title: 'Check out our requirements',
+          detail: {
+            text: 'By using or accessing the service, you agree to be bound by the terms and conditions outlined in the agreement.',
+            button: 'Аccept',
+          },
+        },
+      },
+    },
   })
 })
 
@@ -1721,7 +1680,8 @@ router.get('/shophome', function (req, res) {
     ],
   })
 })
-//==========================
+
+//==================================
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shoporder', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -2085,8 +2045,6 @@ router.get('/shoporder', function (req, res) {
     ],
   })
 })
-//=======================
-
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
