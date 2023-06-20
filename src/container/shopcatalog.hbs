@@ -1,0 +1,333 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div class='p-3'>
+
+  <div class='row'>
+  </div>
+  {{!!nav}}
+  <div class='nav'>
+    <div class='nav-item'>
+      <a
+        href='https://github.com/'
+        class='nav-link'
+      >Home</a>
+    </div>
+    <div class='nav-item'>
+      <a
+        href='https://www.google.com/'
+        class='nav-link'
+      >Contacts</a>
+    </div>
+    <div class='nav-item'>
+      <a
+        href='https://www.youtube.com/'
+        class='nav-link'
+      >Help</a>
+    </div>
+    <div class='nav-item'>
+      <a
+        href='https://github.com/'
+        class='nav-link disabled'
+      >Desabled</a>
+    </div>
+  </div>
+
+  <hr />
+  {{!!header}}
+  <header class='p-3'>
+    <div class='h1'>{{header}}</div>
+  </header>
+  {{!!purchase}}
+
+  {{!!tabs}}
+  <div class='nav'>
+    <div class='nav nav-tabs'>
+      <div class='nav-item'>
+        <p href='#'>Всі замовлення</p>
+      </div>
+      <div class='nav-item'>
+        <p href='#'>Гарантія на повернення</p>
+      </div>
+    </div>
+  </div>
+
+  {{!!actionBlock}}
+  <div class='row'>
+    <div class='col-4'>
+      <label class='form-label'></label>
+      <input class='form-control' />
+      <div class='form-text'></div>
+    </div>
+    {{!! buttons}}
+    <div class='col-2'>
+      <div class='btn btn-success text-light'>Знайти</div>
+    </div>
+
+    <div class='col-3'>
+      <div
+        class='btn btn-outline-success text-success'
+      >Виділити все</div>
+    </div>
+
+    <div class='col-3'>
+      <div
+        class='btn btn-outline-danger text-danger'
+      >Очистити все</div>
+    </div>
+
+  </div>
+  <hr />
+
+  {{!!itemList}}
+  <div>
+    {{!!block1}}
+    <div class="row">
+      
+
+
+   
+      <div class='col-2'>
+        <div>№12587463 від 01.01.2023</div>
+        <h5>Виконано</h5>
+      </div>
+  
+
+
+   
+      <div class='col-1'>
+        <div>Сума</div>
+        <h5>25 000 ₴</h5>
+      </div>
+   
+
+    
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div>
+        <div class='col-2'>
+        <img></img>
+      </div> 
+        <div class='col-2'>
+        <img></img>
+      </div> 
+   
+
+   
+      <div class='col-1'>
+        <div class="btn btn-primary">Детальніше</div>
+      </div>
+   
+     
+    </div>
+    <hr />
+    {{!!block2}}
+
+    <div class="row">
+      
+
+
+   
+      <div class='col-2'>
+        <div>№12587463 від 01.01.2023</div>
+        <h5>Виконано</h5>
+      </div>
+  
+      <div class='col-1'>
+        <div>Сума</div>
+        <h5>25 000 ₴</h5>
+      </div>
+   
+
+      
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+      <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+     
+      
+   
+
+   
+      <div class='col-1'>
+        <div class="btn btn-primary">Детальніше</div>
+      </div>
+    </div>
+  
+  
+    <hr />
+
+    {{!!block3}}
+
+    <div class="row">
+
+
+   
+      <div class='col-2'>
+        <div>№12587463 від 01.01.2023</div>
+        <h5>Виконано</h5>
+        
+     
+      </div>
+  
+
+
+   
+      <div class='col-1'>
+        <div>Сума</div>
+        <h5>25 000 ₴</h5>
+
+ 
+
+      </div>
+   
+       
+         <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+       <div class='col-2'>
+        <img src="https://picsum.photos/110/100"></img>
+      </div> 
+        <div class='col-2'>
+        <img></img>
+      </div> 
+        
+       
+
+     
+   
+
+   
+      <div class='col-2'>
+        <div class="btn btn-primary">Детальніше</div>
+      </div>
+    </div>
+  
+  </div>
+  <hr />
+
+
+  {{!!recipients}}
+
+  <div class="card">
+    <div class="card-body">  
+  
+    
+      <h2>{{userInfo.recipients.title}}</h2>
+      <div class="row">
+    {{!!1}}  
+     <div class="card col-4">
+      <div class="card-body">
+      
+          <h6>Іванов Іван Іванович</h6>
+          <p>+38 (098) 222 2222</p>
+          <div class="btn btn-primary">Редагувати</div>
+      
+      </div>
+     </div>
+    {{!!2}}
+     <div class="card col-4">
+      <div class="card-body">
+     
+         <h6>Петров Петро Петрович</h6>
+          <p>+38 (098) 111 11 11</p>
+          <div class="btn btn-primary">Редагувати</div>
+     
+      </div>
+     </div>
+    {{!!3}}
+      <div class="col-4">
+      
+
+        <h6></h6>
+        <p></p>
+        <div></div>
+
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>  
+ 
+  
+  
+
+  {{!!contacts}}
+   <div class="card">
+    <div class="card-body"> 
+   
+      <h2>{{userInfo.contacts.title}}</h2>
+     <div class="row">
+     {{!!1}}
+     <div class="card col-4">
+       <div class="card-body">
+          <p>Номер телефону</p>
+          <h6>+38 (098) 222 22 22</h6>
+          <div class="btn btn-primary">Редагувати</div>
+      </div>
+       </div>
+
+    {{!!2}}
+
+     <div class="card col-4">
+      <div class="card-body">
+        <p>Додатковий номер телефону'</p>
+        <h6>38 (098) 111 11 11</h6>
+        <div class="btn btn-outline-secondary">Очистити</div>
+      </div>
+       </div>
+
+    {{!!3}}
+
+     <div class="card col-4">
+       <div class="card-body">
+        <p>Електронна адреса</p>
+        <h6>ivanivanov@ukr.net</h6>
+        <div class="btn btn-outline-danger">Видалити</div>
+      </div>
+       </div>
+     </div>
+    </div>
+   </div> 
+      
+   
+ 
+
+
+  {{!!footer}}
+  <div class='p-3'>
+    <div class='row'>
+
+      {{#each footer}}
+        <div class='col-2 g-5'>
+
+          <a href='https://www.youtube.com/'>Home</a>
+          <a
+            href='https://www.youtube.com/feed/trending'
+          >Trending</a>
+          <a
+            href='https://www.youtube.com/feed/subscriptions'
+          >Subscriptions</a>
+          <a
+            href='https://www.youtube.com/feed/library'
+          >Library</a>
+
+        </div>
+
+      {{/each}}
+
+    </div>
+
+  </div>
+</div>
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
