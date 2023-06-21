@@ -3007,6 +3007,7 @@ router.get('/shopcatalog', function (req, res) {
         },
       ],
     },
+
     goodsList: [
       {
         img: 'https://picsum.photos/400/200',
