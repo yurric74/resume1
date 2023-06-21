@@ -3248,5 +3248,33 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
 })
+
+//===========================
+
+router.get('/bootstrap', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+  
+  })
+})
+
+//=========================
+
+router.get('/index8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'index',
+    header: {
+      name: 'Юрій'б
+      surname: 'Якубчик'
+    },
+    notice: 'Resume project',
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
