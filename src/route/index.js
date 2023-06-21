@@ -2502,26 +2502,8 @@ router.get('/shopprofile', function (req, res) {
       },
     },
 
-    footer: [
-      [
-        {
-          text: 'Home',
-          link: 'https://www.youtube.com/',
-        },
-        {
-          text: 'Trending',
-          link: 'https://www.youtube.com/feed/trending',
-        },
-        {
-          text: 'Subscriptions',
-          link: 'https://www.youtube.com/feed/subscriptions',
-        },
-        {
-          text: 'Library',
-          link: 'https://www.youtube.com/feed/library',
-
-        },
-      ],
+   
+    
     footer: [
       [
         {
@@ -3613,7 +3595,7 @@ router.get('/shopcatalog', function (req, res) {
           link: 'https://www.youtube.com/about/',
         },
       ],
-    ],
+    },
   })
 })
 
