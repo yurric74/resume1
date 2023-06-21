@@ -1,0 +1,250 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div class='p-3'>
+  {{!! navigation}}
+
+  <nav>
+    <div class='row'>
+      {{#with navigation}}
+        {{#each links}}
+
+          {{#if this}}<div class='col-2'><a
+                href='{{this.href}}'
+              >{{this.text}}</a></div>
+          {{else}} Desabled {{/if}}
+
+        {{/each}}
+
+      {{/with}}
+    </div>
+  </nav>
+
+  {{!! хлебные крошки}}
+  <div class='p-3'>
+    <div class='row'>
+      {{#each breadcrumb}}
+        <div class='col-2'>
+          <div class='breadcrumb'>
+            <a
+              class='breadcrumb-item'
+              href='{{this.url}}'
+            >{{this.name}}</a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{!! header}}
+  <div class='p-3'>
+    <h1>{{header}}</h1>
+  </div>
+    {{!! sortBlock}}
+  <div class='p-3'>
+    <div class='row'>
+      {{#each sortBlock}}
+
+        <div class='col 4'>
+          <label class='form-label'>
+          </label>
+          <select class='form-select'>
+            <option>{{placeholder}}</option>
+            {{#each option}}
+              {{#with this}}
+                <option value='1'>{{text}}</option>
+                <option value='2'>{{text}}</option>
+              {{/with}}
+            {{/each}}
+          </select>
+
+        </div>
+
+      {{/each}}
+    </div>
+  </div>
+    {{!! sortBlock}}
+
+    <div class="row">
+    <div class="col-12">
+        {{!! filterBlock}}
+        <div class="row">
+           
+            {{#with filterBlock}}
+           
+            <div class='card col-4 '>
+                        {{!! sellers}}
+                        <div >
+                        {{#with sellers}}
+                        <label class="form-label">{{title}}</label>
+                        {{#each list}}
+                        <div >
+                        <div class='form-check'>
+                        <label class='form-check-label'>{{#with value}}{{this}}{{/with}}</label>
+                        <input
+                            type='checkbox'
+                            class='form-check-input'
+                        />
+                        </div>
+                        {{/each}}
+                        </div>
+                        {{/with}}
+                        </div>
+                        {{!! sellers}}
+                        <hr>
+                        {{!! brands}}
+                    <div >
+                    <div >
+                    {{#with brands}}
+                            <label class="form-label">{{title}}</label>
+                            {{#with input}}
+                            <select class="form-select">
+                                <option>{{placeholder}}</option>
+                            </select>
+                            {{/with}}
+                        <div >
+                            {{#each options}}
+                            <div class="form-check">
+                                <label class="form-check-label">{{value}}</label>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                            {{/each}}
+                        </div>
+                    {{/with}}
+                    </div>
+                        {{!! brands}}
+                        <hr>
+                        {{!! price}}
+                        <div >
+                        {{#with price}}
+                            <label class="form-label">{{title}}</label>
+                            {{#with range}}
+                                <select class="form-select">
+                                <option>{{from}}</option>
+                            </select>
+                            <br>
+                            <select class="form-select">
+                                <option>{{to}}</option>
+                            </select>
+                            <br>
+
+                            {{/with}}
+                            {{#with button}}
+                            <a class="btn btn-outline-secondary href={{link}}">{{text}}</a>
+                            {{/with}}
+                        {{/with}}
+                        </div>
+                        <hr>
+                        {{!! price}}
+                        {{!! filterList}}
+                        <div >
+                        {{#each filterList}}
+                            {{#with this}}
+                            
+                            <label class="form-label">{{title}}</label>
+                            {{/with}}
+                            {{#each options}}
+                            <div class="form-check">
+                                <label class="form-check-label">{{value}}</label>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                            {{/each}}
+                        <hr>
+                        {{/each}}
+                    
+                        
+
+                        </div>
+                        {{!! filterList}}
+            </div>
+           
+            {{/with}}
+        </div>
+       
+        </div>
+            {{!! filterBlock}}
+            <br>
+
+
+            {{!!  goodsList}}
+            
+            <div class="col-8">
+           <div class="row">
+        
+            {{#each goodsList}}
+            
+            
+            <div class="card col-6">
+                
+                <img class="card-img-top" src="{{img}}" alt="Product photo">
+                <div class="card-body">
+                    <div class="card-title h3">{{name}}</div>
+                    {{!! кнопки}}
+                    {{#if isHot}}<div class="btn btn-warning rounded-pill">НОТ</div>{{/if}}
+                    {{#if isNew}}<div class="btn btn-primary rounded-pill">Нове</div>{{/if}}
+                    {{#if isFast}}<div class="btn btn-success ">Швидка доставка</div>{{/if}}
+                    {{#if isFree}}<div class="btn btn-secondary ">Безкоштовна доставка</div>{{/if}}
+                
+                </div>
+                <div>{{review.amount}}{{review.text}}</div>
+                <h3>{{price}}</h3>
+                <p>{{delivery}}</p>
+                {{!! кнопки}}
+                {{#each buttons}}
+                {{#if isPrimary}}<a href="{{link}}" class="btn btn-primary">{{text}}</a>{{/if}}
+                {{#if isSecondary}}<a href="{{link}}" class="btn btn-secondary">{{text}}</a>{{/if}}
+                {{/each}}
+                {{!!characteristics }}
+                {{#each characteristics}}
+                <li>{{this.title}}</li>
+                {{/each}}
+            </div>
+            
+            {{/each}}
+            </div>
+            </div>
+     
+            {{!!  goodsList}}
+    </div>
+    </div>
+     
+  {{!! service ЗЕЛЕНАЯ}}
+  <div class=' col-12 p-3'>
+    <div class='card text-bg-success'>
+      {{#with service}}
+        <h2 class='text-center'>{{title}}</h2>
+        <p class='text-center'>{{description}}</p>
+        <div class='row'>
+          {{#each buttons}}
+            <div class='col-12 text-center'>
+              <div
+                class='btn btn-primary text-center'
+                href='{{link}}'
+              >{{text}}</div>
+            </div>
+          {{/each}}
+        </div>
+      {{/with}}
+    </div>
+  </div>
+
+  {{!!footer}}
+  <div class=' col-12 p-3'>
+
+    {{#each footer}}
+      <div class='row'>
+        {{#each this}}
+          <div class='col-3'>
+            <a href='{{this.link}}'> {{this.text}}</a>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+
+  </div>
+</div>
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
