@@ -2519,9 +2519,10 @@ router.get('/shopprofile', function (req, res) {
         {
           text: 'Library',
           link: 'https://www.youtube.com/feed/library',
+        },
 
-      },
-    },
+      ],
+    ],
     footer: [
       [
         {
@@ -4080,7 +4081,7 @@ router.get('/shopreview', function (req, res) {
   })
 })
 
-<<<<<<< HEAD
+
 //===========================
 
 router.get('/bootstrap', function (req, res) {
@@ -4108,11 +4109,11 @@ router.get('/index8', function (req, res) {
     notice: 'Resume project',
   })
 })
-=======
+
 
 // ================================================================
 
 
->>>>>>> 5e1bb0678fd5a39779c41c2535d5eefa0ac7011e
+
 // Підключаємо роутер до бек-енду
 module.exports = router
