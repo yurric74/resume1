@@ -3613,8 +3613,8 @@ router.get('/shopcatalog', function (req, res) {
           text: 'About',
           link: 'https://www.youtube.com/about/',
         },
-      ],
-    ],
+      ]
+    }
   })
 })
 
