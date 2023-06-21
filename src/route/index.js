@@ -2519,9 +2519,10 @@ router.get('/shopprofile', function (req, res) {
         {
           text: 'Library',
           link: 'https://www.youtube.com/feed/library',
-
         },
       ],
+    ],
+
     footer: [
       [
         {
@@ -3613,7 +3614,7 @@ router.get('/shopcatalog', function (req, res) {
           link: 'https://www.youtube.com/about/',
         },
       ],
-    ],
+    },
   })
 })
 
