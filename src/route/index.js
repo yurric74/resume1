@@ -4080,7 +4080,7 @@ router.get('/shopreview', function (req, res) {
   })
 })
 
-<<<<<<< HEAD
+
 //===========================
 
 router.get('/bootstrap', function (req, res) {
@@ -4102,17 +4102,17 @@ router.get('/index8', function (req, res) {
   res.render('index8', {
     layout: 'index',
     header: {
-      name: 'Юрій'б
+      name: 'Юрій',
       surname: 'Якубчик'
     },
     notice: 'Resume project',
   })
 })
-=======
+
 
 // ================================================================
 
 
->>>>>>> 5e1bb0678fd5a39779c41c2535d5eefa0ac7011e
+
 // Підключаємо роутер до бек-енду
 module.exports = router
