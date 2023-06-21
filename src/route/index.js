@@ -4103,7 +4103,7 @@ router.get('/index8', function (req, res) {
   res.render('index8', {
     layout: 'index',
     header: {
-      name: 'Юрій'б
+      name: 'Юрій',
       surname: 'Якубчик'
     },
     notice: 'Resume project',
