@@ -2520,8 +2520,8 @@ router.get('/shopprofile', function (req, res) {
           text: 'Library',
           link: 'https://www.youtube.com/feed/library',
 
-      },
-    },
+        },
+      ],
     footer: [
       [
         {
@@ -4099,7 +4099,7 @@ router.get('/index8', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index8', {
+  res.render('index', {
     layout: 'index',
     header: {
       name: 'Юрій',
