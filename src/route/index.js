@@ -37,12 +37,115 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index8', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
+  res.render('index8', {
+    //                  ↑↑ сюди вводимо JSON дані
+    layout: 'index',
+    page: {
+      name: 'Юрій Якубчик',
+      text: 'Resume project',
+    },
+    pageList: 'Список сторінок',
+    buttons: [
+      [
+        {
+          text: 'Bio',
+          link: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Bootstrap',
+          link: 'http://localhost:3000/bootstrap',
+        },
+        {
+          text: 'Car',
+          link: 'http://localhost:3000/car',
+        },
+        {
+          text: 'Education',
+          link: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Facebook',
+          link: 'http://localhost:3000/facebook',
+        },
+        {
+          text: 'Index8',
+          link: 'http://localhost:3000/index8',
+        },
+        {
+          text: 'JS',
+          link: 'http://localhost:3000/js',
+        },
+        {
+          text: 'Mac',
+          link: 'http://localhost:3000/mac',
+        },
+        {
+          text: 'Person',
+          link: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Program',
+          link: 'http://localhost:3000/program',
+        },
+        {
+          text: 'Shopcart',
+          link: 'http://localhost:3000/shopcart',
+        },
+        {
+          text: 'Shopcatalog',
+          link: 'http://localhost:3000/shopcatalog',
+        },
+        {
+          text: 'Shophome',
+          link: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Shoporder',
+          link: 'http://localhost:3000/shoporder',
+        },
+        {
+          text: 'Shopprofile',
+          link: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Shopreview',
+          link: 'http://localhost:3000/Shopreview',
+        },
+        {
+          text: 'Skills',
+          link: 'http://localhost:3000/skills',
+        },
+        {
+          text: 'Summary',
+          link: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Task21',
+          link: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Task22',
+          link: 'http://localhost:3000/task22',
+        },
+        {
+          text: 'Task31',
+          link: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'Web',
+          link: 'http://localhost:3000/web',
+        },
+        {
+          text: 'Work',
+          link: 'http://localhost:3000/work',
+        },
+      ],
+    ],
+  })
 })
 
 // ================================================================
@@ -4315,20 +4418,6 @@ router.get('/bootstrap', function (req, res) {
 })
 
 //=========================
-
-router.get('/index8', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {
-    layout: 'index',
-    header: {
-      name: 'Юрій',
-      surname: 'Якубчик',
-    },
-    notice: 'Resume project',
-  })
-})
 
 // ================================================================
 
