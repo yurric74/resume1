@@ -1,20 +1,33 @@
-{{! 
-Це код container файлу для summary сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
-}}
-
-<div class="row">
-  <div class="col-2">{{name}}{{surname}}</div>
-  <div class="col-2">{{}}</div>
-  <div class="col-2">{{}}</div>
-  <div class="col-2">{{}}</div>
-  <div class="col-2">{{}}</div>
-  <div class="col-2">{{notice}}</div>
-</div>
-
-  
-
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
     Адже наш layout/default.hbs має вже структуру HTML
---}}
+--}}<div class="ms-3">
+<h3>{{pageList}}</h3>
+</div>
+<div class='col-6 ms-3'>
+<p>Тут вам потрібно написати інформацію про ваш проєкт.
+Поки що можна написати будь-який текст</p>
+</div>
+  <div class='col-2 ms-5'>
+   
+<div>
+  {{#each buttons}}
+  <div class='row '>
+    {{#each this}}
+      
+        <a
+          class='btn btn-primary mb-2'
+          href='{{this.link}}'
+        >{{this.text}}</a>
+      
+    {{/each}}
+  </div>
+  {{/each}}
+</div>
+    </div>
+  </div>
+
+<div class='col-4 mb-5'>
+  <div class='row'>
+
+  </div>
