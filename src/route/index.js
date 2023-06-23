@@ -53,95 +53,95 @@ router.get('/index8', function (req, res) {
       [
         {
           text: 'Bio',
-          link: 'http://localhost:3000/bio',
+          link: '/bio',
         },
         {
           text: 'Bootstrap',
-          link: 'http://localhost:3000/bootstrap',
+          link: '/bootstrap',
         },
         {
           text: 'Car',
-          link: 'http://localhost:3000/car',
+          link: '/car',
         },
         {
           text: 'Education',
-          link: 'http://localhost:3000/bio',
+          link: '/bio',
         },
         {
           text: 'Facebook',
-          link: 'http://localhost:3000/facebook',
+          link: '/facebook',
         },
         {
           text: 'Index8',
-          link: 'http://localhost:3000/index8',
+          link: '/index8',
         },
         {
           text: 'JS',
-          link: 'http://localhost:3000/js',
+          link: '/js',
         },
         {
           text: 'Mac',
-          link: 'http://localhost:3000/mac',
+          link: '/mac',
         },
         {
           text: 'Person',
-          link: 'http://localhost:3000/person',
+          link: '/person',
         },
         {
           text: 'Program',
-          link: 'http://localhost:3000/program',
+          link: '/program',
         },
         {
           text: 'Shopcart',
-          link: 'http://localhost:3000/shopcart',
+          link: '/shopcart',
         },
         {
           text: 'Shopcatalog',
-          link: 'http://localhost:3000/shopcatalog',
+          link: '/shopcatalog',
         },
         {
           text: 'Shophome',
-          link: 'http://localhost:3000/shophome',
+          link: '/shophome',
         },
         {
           text: 'Shoporder',
-          link: 'http://localhost:3000/shoporder',
+          link: '/shoporder',
         },
         {
           text: 'Shopprofile',
-          link: 'http://localhost:3000/shopprofile',
+          link: '/shopprofile',
         },
         {
           text: 'Shopreview',
-          link: 'http://localhost:3000/Shopreview',
+          link: '/Shopreview',
         },
         {
           text: 'Skills',
-          link: 'http://localhost:3000/skills',
+          link: '/skills',
         },
         {
           text: 'Summary',
-          link: 'http://localhost:3000/summary',
+          link: '/summary',
         },
         {
           text: 'Task21',
-          link: 'http://localhost:3000/task21',
+          link: '/task21',
         },
         {
           text: 'Task22',
-          link: 'http://localhost:3000/task22',
+          link: '/task22',
         },
         {
           text: 'Task31',
-          link: 'http://localhost:3000/task31',
+          link: '/task31',
         },
         {
           text: 'Web',
-          link: 'http://localhost:3000/web',
+          link: '/web',
         },
         {
           text: 'Work',
-          link: 'http://localhost:3000/work',
+          link: '/work',
         },
       ],
     ],
